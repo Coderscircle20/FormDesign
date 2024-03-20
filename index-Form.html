@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Form</title>
+</head>
+<style>
+   *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+   }
+   body{
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   /* HEADER SECTION START */
+
+   .header{
+      display: flex;
+      padding: .5rem 1rem;
+      background-color: gray;
+      justify-content: space-between;
+      box-shadow: 0px 4px 4px black;
+      border-bottom: 1px solid rgb(0, 0, 0);
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+   .admin{
+      border-radius: 5px;
+      background-color: rgb(206, 210, 211);
+   }
+
+   /* FORM SECTION START */
+
+   .form{
+      display: flex;
+      padding: 1rem 0rem;
+      overflow-y: scroll;
+      flex-direction: column;
+   }
+   .form::-webkit-scrollbar{
+      display: none;
+   }
+   .box{
+      display: flex;
+      margin-top: 6px;
+      justify-content: space-evenly;
+   }
+   .box1{
+      width: 40%;
+      background-color: rgb(242, 244, 245);
+      border: 1px solid rgb(236, 236, 236);
+   }
+   label{
+      width: 10rem;
+      font-weight: normal;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+   }
+   input, select{
+      width: 100%;
+      border: none;
+      outline: none;
+      height: 1.5rem;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 0px 4px;
+      text-transform: capitalize;
+      background-color: rgb(204, 204, 204);
+      border-bottom: 1px solid rgb(56, 55, 55);
+      font-family:  Roboto, Oxygen, Ubuntu, Cantarell;
+   }
+   .number, .email{
+      padding: 0px 5px;
+   }
+   .select{
+      width: 100%;
+      padding: 0px 0px;
+   }
+   .box2{
+      display: flex;
+   }
+   .btn{
+      display: flex;
+      justify-content: space-between;
+   }
+   button{
+      width: 48%;
+      border: none;
+      outline: none;
+      height: 1.6rem;
+      color: wheat;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1.15rem;
+      background-color: rgb(56, 55, 55);
+   }
+   button:hover{
+      background-color: gray;
+   }
+
+   /* FOOTER SECTION START */
+
+   .footer{
+      display: flex;
+      padding: .3rem 0rem;
+      align-items: center;
+      justify-content: center;
+      background-color: gray;      
+      box-shadow: 8px 0px 4px black;
+      border-top: 1px solid rgb(0, 0, 0);
+   }
+   span{
+      color: white;
+   }
+
+
+
+
+
+   
+   @media (max-width: 600px) {
+      .box{
+         display: flex;
+         padding: 0rem .5rem;
+         flex-direction: column;
+      }
+      .box1{
+         width: 100%;
+         margin-top: 6px;
+      }
+      input, .select{
+         width: 100%;
+      }
+   }
+
+</style>
+<body>
+
+   <div class="header">
+      <div class="logo"><span><h3>STUDENT <br> FROM</h3></span></div>
+      <div class="admin">Admin <hr><h4></h4></div>
+   </div>
+
+   <div class="form">
+      <form action="#" method="POST" enctype="multipart/form-data">
+      <div class="box">
+         <div class="box1">
+            <label>Student Name</label>
+            <input type="text" name="name" placeholder="Student Name">
+         </div>
+         <div class="box1">
+            <label>Student Photo</label>
+            <input type="file" name="photo">
+         </div>
+      </div>
+      <div class="box">
+         <div class="box1">
+            <label>Father's Name</label>
+            <input type="text" name="father" placeholder="Student Father Name">
+         </div>
+         <div class="box1">
+            <label>Mother's Name</label>
+            <input type="text" name="mother" placeholder="Student Mother Name">
+         </div>
+      </div>
+      <div class="box">
+         <div class="box1">
+            <label>Date of Birth</label>
+            <input type="date" name="dateofbirth">
+         </div>
+         <div class="box1">
+            <label>Gender</label>
+            <select name="gender" class="select">
+               <option value="">Select Gender</option>
+               <option value="Male">Male</option>
+               <option value="Female">Female</option>
+               <option value="Transgender">Transgender</option>
+            </select>
+         </div>
+      </div>
+      <div class="box">
+         <div class="box1">
+            <label>Religion</label>
+            <select name="religion" class="select">
+               <option value="">Select Religion</option>
+               <option value="Hindu">Hindu</option>
+               <option value="Sikh">Sikh</option>
+               <option value="Budha">Budha</option>
+               <option value="Muslim">Muslim</option>
+               <option value="Cristian">Cristian</option>
+            </select>
+         </div>
+         <div class="box1">
+            <label>Category</label>
+            <select name="categroy" class="select">
+               <option value="">Select Category</option>
+               <option value="General">General</option>
+               <option value="OBC">OBC</option>
+               <option value="SC">SC</option>
+               <option value="ST">ST</option>
+            </select>
+         </div>
+      </div>
+      <div class="box">
+         <div class="box1">
+            <label>Mobile Number</label>
+            <input type="number" name="number" placeholder="Enter Mobile Number" class="number">
+         </div>
+         <div class="box1">
+            <label>Aadhar Number</label>
+            <input type="number" name="aadhar" placeholder="Enter Aadhar Number" class="number">
+         </div>
+      </div>
+      <div class="box">
+         <div class="box1">
+            <label>Email ID</label>
+            <input type="email" name="email" placeholder="Enter Student Email ID" class="email">
+         </div>
+         <div class="box1">
+            <label>Address</label>
+            <input type="text" name="address" placeholder="Student Permanent Address">
+         </div>
+      </div>
+      <div class="box">
+         <div class="box1">
+            <label>Class Details</label>
+            <div class="box2">
+               <select name="class" >
+                  <option value="">Select Class</option>
+                  <option value="NC">NC</option>
+                  <option value="UKG">UKG</option>
+                  <option value="One">One</option>
+                  <option value="Two">Two</option>
+                  <option value="Three">Three</option>
+                  <option value="Four">Four</option>
+                  <option value="Five">Five</option>
+                  <option value="Six">Six</option>
+                  <option value="Seven">Seven</option>
+                  <option value="Eight">Eight</option>
+                  <option value="Nine">Nine</option>
+                  <option value="Ten">Ten</option>
+               </select>
+               <select name="section">
+                  <option value="">Select Section</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+               </select>
+               <input type="number" name="roll" placeholder="Class Roll Number">
+            </div>
+         </div>
+         <div class="box1 btn">
+            <button type="reset">Reset</button>
+            <button type="submit" name="student_add" class="save">Add Student</button>
+         </div>
+      </div>
+      </form>
+   </div>
+
+   <div class="footer">
+      <h4>COPYWRITE | &COPY;&nbsp;<span>SUJAY SINGH</span></h4>
+   </div>
+
+</body>
+</html>
